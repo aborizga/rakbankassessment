@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: javaapp
+  labels:
+    app: javaapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: javaapp
+  template:
+    metadata:
+      labels:
+        app: javaapp
+    spec:
+      containers:
+      - name: javaapp
+        image: 649008984352.dkr.ecr.eu-west-3.amazonaws.com/rkbank #ecr repo name
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080

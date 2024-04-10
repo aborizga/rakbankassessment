@@ -1,0 +1,19 @@
+***************************How TO handle Secrets*****************************
+
+1- aws account access and secret key were added to github secrets ( uses to connect to aws services)
+steps:
+	1-go to github repo setting
+	2-open secrets tap
+	3-add secret name and values
+	4-call any needed secret as avariable ( example ${{ secrets.AWS_ACCOUNT_ID }}
+
+
+2- terraform code require access (access and secret key), the are located is tfvars file witch is not
+   uploaded to the github or any repo, because we will run the code from our labtop, if you want to run the code 
+   from aws or any bation host you just need Iam role to allow reaching all the needed services.
+
+3- for terraform: create var.tfvars on your root directory and add aws secret and access key .
+add var.tfvars to .gitignore since it contain sensative data
+
+
+
