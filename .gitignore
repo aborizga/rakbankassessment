@@ -31,3 +31,4 @@ build/
 /eks-terraform/.terraform
 /eks-terraform/var.tfvars
 /eks-terraform/terraform.tfstate
+/eks-terraform/terraform.tfstate.backup
